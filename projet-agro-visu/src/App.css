@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  color: #1a1a2e;
+}
+
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.app-header h1 {
+  font-size: 28px;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+}
+
+.map-tooltip {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  max-width: 250px;
+}
+
+.map-tooltip strong {
+  color: #1a1a2e;
+  font-size: 13px;
+}
+
+.map-tooltip em {
+  color: #888;
+  font-size: 11px;
+  display: block;
+  margin-top: 5px;
+}
+
+
