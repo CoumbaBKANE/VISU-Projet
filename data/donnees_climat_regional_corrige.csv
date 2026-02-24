@@ -1,0 +1,361 @@
+Année,Mois,Région,Température_C,Précipitations_mm
+2010,1,Grand Est,-1.39,62.93
+2010,1,Nouvelle-Aquitaine,4.08,83.7
+2010,1,Occitanie,2.57,96.72
+2010,2,Grand Est,1.84,93.8
+2010,2,Nouvelle-Aquitaine,5.81,70.28
+2010,2,Occitanie,4.15,92.4
+2010,3,Grand Est,5.31,64.48
+2010,3,Nouvelle-Aquitaine,8.58,63.55
+2010,3,Occitanie,6.85,83.39
+2010,4,Grand Est,10.06,36.3
+2010,4,Nouvelle-Aquitaine,12.94,34.8
+2010,4,Occitanie,11.68,45.0
+2010,5,Grand Est,11.44,118.11
+2010,5,Nouvelle-Aquitaine,14.23,70.99
+2010,5,Occitanie,12.97,121.83
+2010,6,Grand Est,17.29,70.8
+2010,6,Nouvelle-Aquitaine,18.52,105.9
+2010,6,Occitanie,17.5,97.8
+2010,7,Grand Est,20.49,77.5
+2010,7,Nouvelle-Aquitaine,21.6,40.92
+2010,7,Occitanie,21.64,45.57
+2010,8,Grand Est,17.18,152.83
+2010,8,Nouvelle-Aquitaine,20.13,29.76
+2010,8,Occitanie,19.91,37.82
+2010,9,Grand Est,13.21,88.8
+2010,9,Nouvelle-Aquitaine,17.4,44.7
+2010,9,Occitanie,16.29,68.4
+2010,10,Grand Est,9.13,51.77
+2010,10,Nouvelle-Aquitaine,13.58,96.72
+2010,10,Occitanie,11.93,136.09
+2010,11,Grand Est,5.68,114.6
+2010,11,Nouvelle-Aquitaine,9.41,147.3
+2010,11,Occitanie,7.43,99.6
+2010,12,Grand Est,-1.2,151.9
+2010,12,Nouvelle-Aquitaine,4.62,94.24
+2010,12,Occitanie,3.43,70.99
+2011,1,Grand Est,2.25,84.01
+2011,1,Nouvelle-Aquitaine,5.91,44.64
+2011,1,Occitanie,4.24,50.22
+2011,2,Grand Est,3.29,38.64
+2011,2,Nouvelle-Aquitaine,8.0,50.96
+2011,2,Occitanie,6.23,49.28
+2011,3,Grand Est,7.19,31.93
+2011,3,Nouvelle-Aquitaine,10.38,43.71
+2011,3,Occitanie,8.6,100.75
+2011,4,Grand Est,12.92,26.7
+2011,4,Nouvelle-Aquitaine,15.26,21.0
+2011,4,Occitanie,13.63,30.3
+2011,5,Grand Est,15.15,36.89
+2011,5,Nouvelle-Aquitaine,17.65,30.38
+2011,5,Occitanie,16.44,48.98
+2011,6,Grand Est,16.99,82.2
+2011,6,Nouvelle-Aquitaine,18.42,49.8
+2011,6,Occitanie,17.5,74.4
+2011,7,Grand Est,16.25,97.34
+2011,7,Nouvelle-Aquitaine,19.14,75.95
+2011,7,Occitanie,18.59,92.38
+2011,8,Grand Est,18.34,103.54
+2011,8,Nouvelle-Aquitaine,20.8,64.79
+2011,8,Occitanie,20.72,53.63
+2011,9,Grand Est,16.33,49.5
+2011,9,Nouvelle-Aquitaine,19.61,33.0
+2011,9,Occitanie,18.93,36.0
+2011,10,Grand Est,10.44,56.11
+2011,10,Nouvelle-Aquitaine,15.28,42.16
+2011,10,Occitanie,14.01,76.57
+2011,11,Grand Est,6.53,16.8
+2011,11,Nouvelle-Aquitaine,12.8,60.6
+2011,11,Occitanie,10.98,144.3
+2011,12,Grand Est,4.8,209.87
+2011,12,Nouvelle-Aquitaine,9.5,136.09
+2011,12,Occitanie,7.05,82.46
+2012,1,Grand Est,3.36,110.36
+2012,1,Nouvelle-Aquitaine,7.3,53.94
+2012,1,Occitanie,5.4,42.78
+2012,2,Grand Est,-1.77,24.07
+2012,2,Nouvelle-Aquitaine,2.49,20.3
+2012,2,Occitanie,0.65,15.66
+2012,3,Grand Est,8.46,33.17
+2012,3,Nouvelle-Aquitaine,11.02,24.8
+2012,3,Occitanie,9.58,35.96
+2012,4,Grand Est,8.56,106.5
+2012,4,Nouvelle-Aquitaine,10.56,174.3
+2012,4,Occitanie,9.63,145.2
+2012,5,Grand Est,14.6,106.64
+2012,5,Nouvelle-Aquitaine,16.22,70.99
+2012,5,Occitanie,15.17,103.23
+2012,6,Grand Est,16.25,116.4
+2012,6,Nouvelle-Aquitaine,18.8,84.0
+2012,6,Occitanie,18.97,66.9
+2012,7,Grand Est,17.59,101.99
+2012,7,Nouvelle-Aquitaine,19.58,38.13
+2012,7,Occitanie,19.53,52.7
+2012,8,Grand Est,19.51,60.14
+2012,8,Nouvelle-Aquitaine,22.0,25.42
+2012,8,Occitanie,21.86,55.18
+2012,9,Grand Est,14.29,82.8
+2012,9,Nouvelle-Aquitaine,18.29,51.9
+2012,9,Occitanie,17.25,65.7
+2012,10,Grand Est,10.21,89.9
+2012,10,Nouvelle-Aquitaine,14.85,117.18
+2012,10,Occitanie,13.8,110.98
+2012,11,Grand Est,6.06,94.2
+2012,11,Nouvelle-Aquitaine,10.24,76.5
+2012,11,Occitanie,8.97,77.7
+2012,12,Grand Est,3.59,148.18
+2012,12,Nouvelle-Aquitaine,8.59,122.14
+2012,12,Occitanie,6.04,78.12
+2013,1,Grand Est,1.22,74.4
+2013,1,Nouvelle-Aquitaine,6.43,137.64
+2013,1,Occitanie,4.34,116.56
+2013,2,Grand Est,-0.18,73.64
+2013,2,Nouvelle-Aquitaine,5.55,83.44
+2013,2,Occitanie,3.38,72.8
+2013,3,Grand Est,2.82,61.07
+2013,3,Nouvelle-Aquitaine,8.85,79.36
+2013,3,Occitanie,7.51,130.82
+2013,4,Grand Est,9.1,97.2
+2013,4,Nouvelle-Aquitaine,11.5,79.8
+2013,4,Occitanie,10.2,101.7
+2013,5,Grand Est,10.92,165.54
+2013,5,Nouvelle-Aquitaine,12.63,119.97
+2013,5,Occitanie,11.54,125.86
+2013,6,Grand Est,16.11,85.8
+2013,6,Nouvelle-Aquitaine,16.94,91.8
+2013,6,Occitanie,16.49,67.5
+2013,7,Grand Est,20.78,55.8
+2013,7,Nouvelle-Aquitaine,23.15,41.23
+2013,7,Occitanie,22.1,64.48
+2013,8,Grand Est,18.48,59.52
+2013,8,Nouvelle-Aquitaine,20.77,32.24
+2013,8,Occitanie,20.44,53.94
+2013,9,Grand Est,14.7,108.0
+2013,9,Nouvelle-Aquitaine,18.4,61.8
+2013,9,Occitanie,17.35,68.7
+2013,10,Grand Est,12.01,128.96
+2013,10,Nouvelle-Aquitaine,16.03,86.18
+2013,10,Occitanie,14.83,80.91
+2013,11,Grand Est,5.0,120.9
+2013,11,Nouvelle-Aquitaine,9.18,133.8
+2013,11,Occitanie,7.2,154.2
+2013,12,Grand Est,3.6,69.75
+2013,12,Nouvelle-Aquitaine,7.1,74.71
+2013,12,Occitanie,5.5,50.84
+2014,1,Grand Est,4.57,89.59
+2014,1,Nouvelle-Aquitaine,9.08,149.73
+2014,1,Occitanie,6.94,125.24
+2014,2,Grand Est,5.16,101.92
+2014,2,Nouvelle-Aquitaine,8.8,134.68
+2014,2,Occitanie,6.66,98.84
+2014,3,Grand Est,7.85,25.11
+2014,3,Nouvelle-Aquitaine,10.26,70.99
+2014,3,Occitanie,8.72,57.97
+2014,4,Grand Est,11.52,37.8
+2014,4,Nouvelle-Aquitaine,13.26,68.7
+2014,4,Occitanie,12.28,80.4
+2014,5,Grand Est,12.98,88.35
+2014,5,Nouvelle-Aquitaine,14.42,83.7
+2014,5,Occitanie,13.46,73.47
+2014,6,Grand Est,17.88,49.2
+2014,6,Nouvelle-Aquitaine,19.8,48.0
+2014,6,Occitanie,19.21,49.8
+2014,7,Grand Est,18.99,161.51
+2014,7,Nouvelle-Aquitaine,20.53,81.22
+2014,7,Occitanie,19.38,104.78
+2014,8,Grand Est,16.22,130.82
+2014,8,Nouvelle-Aquitaine,19.15,75.95
+2014,8,Occitanie,18.85,84.01
+2014,9,Grand Est,15.71,37.8
+2014,9,Nouvelle-Aquitaine,19.63,22.8
+2014,9,Occitanie,18.25,86.4
+2014,10,Grand Est,12.67,103.23
+2014,10,Nouvelle-Aquitaine,16.56,52.39
+2014,10,Occitanie,15.67,61.38
+2014,11,Grand Est,7.62,90.6
+2014,11,Nouvelle-Aquitaine,12.76,115.8
+2014,11,Occitanie,11.08,167.7
+2014,12,Grand Est,3.38,97.96
+2014,12,Nouvelle-Aquitaine,7.12,51.46
+2014,12,Occitanie,5.45,71.61
+2015,1,Grand Est,2.34,121.52
+2015,1,Nouvelle-Aquitaine,6.68,88.35
+2015,1,Occitanie,4.81,73.16
+2015,2,Grand Est,1.52,51.52
+2015,2,Nouvelle-Aquitaine,5.77,92.12
+2015,2,Occitanie,3.87,87.92
+2015,3,Grand Est,6.21,64.17
+2015,3,Nouvelle-Aquitaine,9.66,62.0
+2015,3,Occitanie,8.7,79.98
+2015,4,Grand Est,10.2,67.8
+2015,4,Nouvelle-Aquitaine,13.58,55.2
+2015,4,Occitanie,12.1,78.6
+2015,5,Grand Est,13.43,79.05
+2015,5,Nouvelle-Aquitaine,15.77,50.84
+2015,5,Occitanie,15.31,40.3
+2015,6,Grand Est,17.5,47.1
+2015,6,Nouvelle-Aquitaine,20.07,57.9
+2015,6,Occitanie,19.95,72.3
+2015,7,Grand Est,21.33,38.75
+2015,7,Nouvelle-Aquitaine,22.02,26.97
+2015,7,Occitanie,22.79,30.38
+2015,8,Grand Est,20.3,64.79
+2015,8,Nouvelle-Aquitaine,21.06,105.4
+2015,8,Occitanie,20.55,97.65
+2015,9,Grand Est,13.38,111.9
+2015,9,Nouvelle-Aquitaine,16.69,68.7
+2015,9,Occitanie,15.85,92.1
+2015,10,Grand Est,9.38,45.88
+2015,10,Nouvelle-Aquitaine,13.51,53.01
+2015,10,Occitanie,12.35,66.96
+2015,11,Grand Est,8.09,91.2
+2015,11,Nouvelle-Aquitaine,12.26,63.3
+2015,11,Occitanie,10.26,71.7
+2015,12,Grand Est,7.01,36.27
+2015,12,Nouvelle-Aquitaine,10.21,17.05
+2015,12,Occitanie,8.43,19.84
+2016,1,Grand Est,3.32,123.07
+2016,1,Nouvelle-Aquitaine,8.79,176.39
+2016,1,Occitanie,6.79,109.12
+2016,2,Grand Est,4.23,127.6
+2016,2,Nouvelle-Aquitaine,8.34,130.21
+2016,2,Occitanie,6.69,116.58
+2016,3,Grand Est,4.76,89.28
+2016,3,Nouvelle-Aquitaine,8.96,96.41
+2016,3,Occitanie,7.33,84.32
+2016,4,Grand Est,8.44,115.5
+2016,4,Nouvelle-Aquitaine,11.38,75.0
+2016,4,Occitanie,10.53,90.3
+2016,5,Grand Est,13.29,136.09
+2016,5,Nouvelle-Aquitaine,15.17,97.34
+2016,5,Occitanie,13.74,110.36
+2016,6,Grand Est,16.66,158.7
+2016,6,Nouvelle-Aquitaine,18.34,57.0
+2016,6,Occitanie,17.88,61.5
+2016,7,Grand Est,19.21,65.1
+2016,7,Nouvelle-Aquitaine,21.08,12.71
+2016,7,Occitanie,20.86,52.39
+2016,8,Grand Est,19.08,39.37
+2016,8,Nouvelle-Aquitaine,21.72,19.84
+2016,8,Occitanie,20.81,26.97
+2016,9,Grand Est,17.24,39.6
+2016,9,Nouvelle-Aquitaine,19.64,41.7
+2016,9,Occitanie,18.7,52.5
+2016,10,Grand Est,9.14,62.62
+2016,10,Nouvelle-Aquitaine,13.61,47.12
+2016,10,Occitanie,12.83,94.55
+2016,11,Grand Est,5.33,98.4
+2016,11,Nouvelle-Aquitaine,10.21,104.7
+2016,11,Occitanie,8.88,120.0
+2016,12,Grand Est,1.69,11.47
+2016,12,Nouvelle-Aquitaine,7.51,14.57
+2016,12,Occitanie,6.22,25.42
+2017,1,Grand Est,-1.42,58.59
+2017,1,Nouvelle-Aquitaine,4.35,40.92
+2017,1,Occitanie,2.8,72.85
+2017,2,Grand Est,4.92,77.28
+2017,2,Nouvelle-Aquitaine,8.98,81.76
+2017,2,Occitanie,7.72,82.04
+2017,3,Grand Est,8.61,82.46
+2017,3,Nouvelle-Aquitaine,11.28,93.0
+2017,3,Occitanie,9.96,105.4
+2017,4,Grand Est,8.66,34.2
+2017,4,Nouvelle-Aquitaine,12.24,29.4
+2017,4,Occitanie,11.15,49.8
+2017,5,Grand Est,15.09,68.82
+2017,5,Nouvelle-Aquitaine,16.84,93.62
+2017,5,Occitanie,15.5,92.69
+2017,6,Grand Est,19.42,70.5
+2017,6,Nouvelle-Aquitaine,20.78,84.3
+2017,6,Occitanie,20.4,82.8
+2017,7,Grand Est,19.55,96.72
+2017,7,Nouvelle-Aquitaine,21.1,58.59
+2017,7,Occitanie,20.8,52.7
+2017,8,Grand Est,18.86,73.16
+2017,8,Nouvelle-Aquitaine,20.99,47.74
+2017,8,Occitanie,21.0,62.0
+2017,9,Grand Est,13.29,99.9
+2017,9,Nouvelle-Aquitaine,16.67,79.5
+2017,9,Occitanie,15.38,51.6
+2017,10,Grand Est,11.46,48.98
+2017,10,Nouvelle-Aquitaine,15.61,24.8
+2017,10,Occitanie,14.21,29.76
+2017,11,Grand Est,5.34,123.9
+2017,11,Nouvelle-Aquitaine,9.01,55.8
+2017,11,Occitanie,7.09,55.2
+2017,12,Grand Est,3.18,137.64
+2017,12,Nouvelle-Aquitaine,6.99,127.1
+2017,12,Occitanie,4.56,97.03
+2018,1,Grand Est,5.58,203.67
+2018,1,Nouvelle-Aquitaine,9.34,141.36
+2018,1,Occitanie,7.5,146.63
+2018,2,Grand Est,-0.46,45.64
+2018,2,Nouvelle-Aquitaine,4.73,80.64
+2018,2,Occitanie,3.05,94.92
+2018,3,Grand Est,4.54,90.21
+2018,3,Nouvelle-Aquitaine,9.15,129.27
+2018,3,Occitanie,7.49,133.61
+2018,4,Grand Est,12.83,63.0
+2018,4,Nouvelle-Aquitaine,13.72,93.0
+2018,4,Occitanie,12.44,120.3
+2018,5,Grand Est,15.83,83.7
+2018,5,Nouvelle-Aquitaine,15.69,84.32
+2018,5,Occitanie,14.41,132.68
+2018,6,Grand Est,18.51,58.8
+2018,6,Nouvelle-Aquitaine,20.07,87.0
+2018,6,Occitanie,19.05,91.8
+2018,7,Grand Est,21.76,31.93
+2018,7,Nouvelle-Aquitaine,22.68,54.56
+2018,7,Occitanie,22.04,80.6
+2018,8,Grand Est,20.43,45.26
+2018,8,Nouvelle-Aquitaine,22.18,34.41
+2018,8,Occitanie,21.71,54.87
+2018,9,Grand Est,16.02,37.5
+2018,9,Nouvelle-Aquitaine,19.54,18.9
+2018,9,Occitanie,18.92,30.3
+2018,10,Grand Est,11.59,28.83
+2018,10,Nouvelle-Aquitaine,14.51,64.48
+2018,10,Occitanie,13.53,150.04
+2018,11,Grand Est,6.44,56.1
+2018,11,Nouvelle-Aquitaine,10.33,99.9
+2018,11,Occitanie,9.35,113.4
+2018,12,Grand Est,4.46,145.08
+2018,12,Nouvelle-Aquitaine,9.24,99.82
+2018,12,Occitanie,7.44,64.48
+2019,1,Grand Est,1.25,84.01
+2019,1,Nouvelle-Aquitaine,5.71,86.18
+2019,1,Occitanie,3.68,76.88
+2019,2,Grand Est,5.16,36.96
+2019,2,Nouvelle-Aquitaine,9.05,35.0
+2019,2,Occitanie,7.25,33.6
+2019,3,Grand Est,7.59,100.44
+2019,3,Nouvelle-Aquitaine,10.74,41.54
+2019,3,Occitanie,9.08,29.76
+2019,4,Grand Est,9.69,72.3
+2019,4,Nouvelle-Aquitaine,12.13,79.2
+2019,4,Occitanie,10.41,102.9
+2019,5,Grand Est,11.55,89.28
+2019,5,Nouvelle-Aquitaine,14.21,71.92
+2019,5,Occitanie,12.92,80.29
+2019,6,Grand Est,19.59,63.3
+2019,6,Nouvelle-Aquitaine,19.31,67.8
+2019,6,Occitanie,18.98,63.0
+2019,7,Grand Est,20.77,38.75
+2019,7,Nouvelle-Aquitaine,22.91,43.71
+2019,7,Occitanie,22.58,56.42
+2019,8,Grand Est,19.71,66.03
+2019,8,Nouvelle-Aquitaine,21.4,43.09
+2019,8,Occitanie,21.29,69.13
+2019,9,Grand Est,15.22,52.2
+2019,9,Nouvelle-Aquitaine,18.99,42.6
+2019,9,Occitanie,18.06,60.0
+2019,10,Grand Est,11.91,125.24
+2019,10,Nouvelle-Aquitaine,15.82,124.93
+2019,10,Occitanie,14.66,133.92
+2019,11,Grand Est,5.58,106.8
+2019,11,Nouvelle-Aquitaine,9.89,228.6
+2019,11,Occitanie,7.74,157.2
+2019,12,Grand Est,4.67,130.82
+2019,12,Nouvelle-Aquitaine,9.55,121.83
+2019,12,Occitanie,7.92,125.55
