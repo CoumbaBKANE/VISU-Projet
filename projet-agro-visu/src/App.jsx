@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 import FranceMap from './components/FranceMap';
 import RegionDetail from './components/RegionDetail';
 import './App.css';
+import { DATA_PATHS } from './config';
 
 function App() {
   const [data, setData] = useState([]);
@@ -13,8 +14,8 @@ function App() {
 
   useEffect(() => {
     Promise.all([
-      d3.csv('/data/data_final_avec_anomalies.csv', d3.autoType),
-      d3.csv('/data/tendances_climatiques_region.csv', d3.autoType)
+      d3.csv(DATA_PATHS.dataFinal, d3.autoType),
+      d3.csv(d3.csv(DATA_PATHS.tendances, d3.autoType))
     ]).then(([dataFinal, dataTendances]) => {
        console.log('Données chargées:', {
         dataFinal: dataFinal.length,

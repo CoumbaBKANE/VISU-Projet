@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
+import { DATA_PATHS } from '../config';
 
 function FranceMap({ tendances, selectedRegion, onRegionClick }) {
   const svgRef = useRef();
@@ -7,7 +8,7 @@ function FranceMap({ tendances, selectedRegion, onRegionClick }) {
 
   // Charger le GeoJSON
   useEffect(() => {
-    d3.json('/data/regions.geojson')
+    d3.json(DATA_PATHS.geojson)
         .then(data => {
             // Charger TOUTE la France, pas juste 3 régions
             setGeoData(data);

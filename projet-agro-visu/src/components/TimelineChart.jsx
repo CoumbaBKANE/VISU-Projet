@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 
 function TimelineChart({ data, region }) {
   const svgRef = useRef();
+  const [climateVariable, setClimateVariable] = useState('temperature');
 
   useEffect(() => {
     if (!data || data.length === 0) return;
@@ -40,9 +41,28 @@ function TimelineChart({ data, region }) {
       .range([innerHeight, 0]);
 
     // Échelle Y droite : température anomalie (°C)
-    const yScaleTemp = d3.scaleLinear()
-      .domain(d3.extent(data, d => d.Anomalie_temp_C)).nice()
+    const climateData = climateVariable === 'temperature' 
+      ? data.map(d => d.Anomalie_temp_C || 0)
+      : data.map(d => d.Anomalie_precip_pct || 0);
+
+    const yScaleClimate = d3.scaleLinear()
+      .domain(d3.extent(climateData)).nice()
       .range([innerHeight, 0]);
+
+    // Configuration selon la variable climatique choisie
+    const climateConfig = climateVariable === 'temperature' 
+      ? {
+          color: "#c0392b",
+          label: "Température (écart à la normale, °C)",
+          unit: "°C",
+          dataKey: "Anomalie_temp_C"
+        }
+      : {
+          color: "#3498db",
+          label: "Précipitations (écart à la normale, %)",
+          unit: "%",
+          dataKey: "Anomalie_precip_pct"
+        };  
 
     // Axe X
     g.append("g")
@@ -64,19 +84,20 @@ function TimelineChart({ data, region }) {
       .attr("y", -55)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
-      .text("Anomalie de rendement (%)");
+      .text("Performance du rendement (%)");
 
     // Axe Y droit (température)
+    // Axe Y droit (variable climatique)
     g.append("g")
       .attr("transform", `translate(${innerWidth},0)`)
-      .call(d3.axisRight(yScaleTemp).tickFormat(d => `${d}°C`))
+      .call(d3.axisRight(yScaleClimate).tickFormat(d => `${d}${climateConfig.unit}`))
       .append("text")
       .attr("transform", "rotate(-90)")
       .attr("x", -innerHeight / 2)
       .attr("y", 60)
-      .attr("fill", "#c0392b")
+      .attr("fill", climateConfig.color)
       .attr("text-anchor", "middle")
-      .text("Anomalie température (°C)");
+      .text(climateConfig.label);
 
     // Ligne de référence 0
     g.append("line")
@@ -116,27 +137,30 @@ function TimelineChart({ data, region }) {
         .attr("fill", colorScale(culture));
     });
 
-    // Courbe de température (en rouge pointillé)
-    const tempData = data
-      .filter(d => d.Culture === "Blé") // une culture suffit pour la temp
+    // Courbe de la variable climatique (en pointillé)
+    const climateDataFiltered = data
+      .filter(d => d.Culture === "Blé") // une culture suffit pour le climat
       .sort((a, b) => a.Année - b.Année);
-
-    const lineTemp = d3.line()
+      
+    const lineClimate = d3.line()
       .x(d => xScale(d.Année))
-      .y(d => yScaleTemp(d.Anomalie_temp_C));
+      .y(d => yScaleClimate(d[climateConfig.dataKey]));
 
     g.append("path")
-      .datum(tempData)
+      .datum(climateDataFiltered)
       .attr("fill", "none")
-      .attr("stroke", "#c0392b")
+      .attr("stroke", climateConfig.color)
       .attr("stroke-width", 2)
       .attr("stroke-dasharray", "6,3")
-      .attr("d", lineTemp);
+      .attr("d", lineClimate);
 
     // Légende
     const legendData = [
       ...cultures.map(c => ({ label: c, color: colorScale(c), dash: null })),
-      { label: "Température", color: "#c0392b", dash: "6,3" }
+      { 
+        label: climateVariable === 'temperature' ? "Température" : "Précipitations", 
+        color: climateConfig.color, 
+        dash: "6,3" }
     ];
 
     const legend = g.append("g")
@@ -161,9 +185,34 @@ function TimelineChart({ data, region }) {
         .text(item.label);
     });
 
-  }, [data, region]);
+  }, [data, region, climateVariable]);
 
-  return <svg ref={svgRef}></svg>;
+  return (
+    <div className="timeline-chart-container">
+      <div className="chart-controls">
+        <label htmlFor="climate-select" style={{ marginRight: '10px', fontWeight: '500' }}>
+          Variable :
+        </label>
+        <select 
+          id="climate-select"
+          value={climateVariable} 
+          onChange={(e) => setClimateVariable(e.target.value)}
+          style={{
+            padding: '8px 12px',
+            borderRadius: '6px',
+            border: '1px solid #ddd',
+            fontSize: '13px',
+            cursor: 'pointer',
+            backgroundColor: 'white'
+          }}
+        >
+          <option value="temperature">Température</option>
+          <option value="precipitation">Précipitations</option>
+        </select>
+      </div>
+      <svg ref={svgRef}></svg>
+    </div>
+  );
 }
 
 export default TimelineChart;

@@ -4,6 +4,7 @@ import * as d3 from 'd3';
 function ScatterPlot({ data, region }) {
   const svgRef = useRef();
   const [selectedCulture, setSelectedCulture] = useState('Toutes');
+  const [climateVariable, setClimateVariable] = useState('temperature');
 
   useEffect(() => {
     if (!data || data.length === 0) return;
@@ -31,9 +32,22 @@ function ScatterPlot({ data, region }) {
     const g = svg.append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
+    // Configuration variable climatique
+    const climateConfig = climateVariable === 'temperature' 
+      ? {
+          dataKey: "Anomalie_temp_C",
+          label: "Température (écart à la normale, °C)",
+          color: "#c0392b"
+        }
+      : {
+          dataKey: "Anomalie_precip_pct",
+          label: "Précipitations (écart à la normale, %)",
+          color: "#3498db"
+        };
+
     // Échelles
     const xScale = d3.scaleLinear()
-      .domain(d3.extent(filteredData, d => d.Anomalie_temp_C)).nice()
+      .domain(d3.extent(filteredData, d => d[climateConfig.dataKey])).nice()
       .range([0, innerWidth]);
 
     const yScale = d3.scaleLinear()
@@ -70,11 +84,11 @@ function ScatterPlot({ data, region }) {
     xAxis.append("text")
       .attr("x", innerWidth / 2)
       .attr("y", 45)
-      .attr("fill", "black")
+      .attr("fill", climateConfig.color)
       .attr("text-anchor", "middle")
       .style("font-size", "13px")
       .style("font-weight", "500")
-      .text("Anomalie de température (°C)");
+      .text(climateConfig.label);
 
     const yAxis = g.append("g")
       .call(d3.axisLeft(yScale).ticks(8));
@@ -87,7 +101,7 @@ function ScatterPlot({ data, region }) {
       .attr("text-anchor", "middle")
       .style("font-size", "13px")
       .style("font-weight", "500")
-      .text("Anomalie de rendement (%)");
+      .text("Performance du rendement (%)");
 
     // Lignes de référence (0,0)
     g.append("line")
@@ -143,11 +157,11 @@ function ScatterPlot({ data, region }) {
       const cultData = filteredData.filter(d => d.Culture === culture);
       if (cultData.length < 2) return;
 
-      const reg = linearRegression(cultData, "Anomalie_temp_C", "Anomalie_rendement_pct");
+      const reg = linearRegression(cultData, climateConfig.dataKey, "Anomalie_rendement_pct");
       if (!reg) return;
 
-      const xMin = d3.min(cultData, d => d.Anomalie_temp_C);
-      const xMax = d3.max(cultData, d => d.Anomalie_temp_C);
+      const xMin = d3.min(cultData, d => d[climateConfig.dataKey]);
+      const xMax = d3.max(cultData, d => d[climateConfig.dataKey]);
 
       // Ligne de régression
       g.append("line")
@@ -179,7 +193,7 @@ function ScatterPlot({ data, region }) {
     g.selectAll("circle")
       .data(filteredData)
       .join("circle")
-        .attr("cx", d => xScale(d.Anomalie_temp_C))
+        .attr("cx", d => xScale(d[climateConfig.dataKey]))
         .attr("cy", d => yScale(d.Anomalie_rendement_pct))
         .attr("r", 6)
         .attr("fill", d => colorScale(d.Culture))
@@ -203,8 +217,8 @@ function ScatterPlot({ data, region }) {
               </div>
               <div style="line-height: 1.6;">
                 <strong>Année:</strong> ${d.Année}<br/>
-                <strong>Anomalie temp:</strong> ${(d.Anomalie_temp_C ?? 0) > 0 ? '+' : ''}${(d.Anomalie_temp_C ?? 0).toFixed(2)}°C<br/>
-                <strong>Anomalie rendement:</strong> ${(d.Anomalie_rendement_pct ?? 0) > 0 ? '+' : ''}${(d.Anomalie_rendement_pct ?? 0).toFixed(1)}%<br/>
+                <strong>${climateVariable === 'temperature' ? 'Temp. écart:' : 'Préc. écart:'}  </strong> ${(d[climateConfig.dataKey] ?? 0) > 0 ? '+' : ''}${climateVariable === 'temperature' ? (d[climateConfig.dataKey] ?? 0).toFixed(2) + '°C' : (d[climateConfig.dataKey] ?? 0).toFixed(1) + '%'}<br/>
+                <strong>Perf. rendement:</strong> ${(d.Anomalie_rendement_pct ?? 0) > 0 ? '+' : ''}${(d.Anomalie_rendement_pct ?? 0).toFixed(1)}%<br/>
                 <strong>Rendement:</strong> ${(d.Rendement_qha ?? 0).toFixed(1)} q/ha
               </div>
             `)
@@ -237,7 +251,7 @@ function ScatterPlot({ data, region }) {
       const cultData = filteredData.filter(d => d.Culture === culture);
       if (cultData.length < 2) return;
 
-      const reg = linearRegression(cultData, "Anomalie_temp_C", "Anomalie_rendement_pct");
+      const reg = linearRegression(cultData, climateConfig.dataKey, "Anomalie_rendement_pct");
       if (!reg) return;
 
       const y = i * 85;
@@ -267,13 +281,6 @@ function ScatterPlot({ data, region }) {
         .style("font-size", "11px")
         .style("fill", "#666")
         .text(`Corrélation: ${reg.r.toFixed(3)}`);
-
-      legend.append("text")
-        .attr("x", 20)
-        .attr("y", y + 40)
-        .style("font-size", "11px")
-        .style("fill", "#666")
-        .text(`R² = ${reg.r2.toFixed(3)}`);
 
       legend.append("text")
         .attr("x", 20)
@@ -307,7 +314,7 @@ function ScatterPlot({ data, region }) {
       tooltip.remove();
     };
 
-  }, [data, region, selectedCulture]);
+  }, [data, region, selectedCulture, climateVariable]);
 
   // Extraire les cultures disponibles
   const cultures = data ? [...new Set(data.map(d => d.Culture))].sort() : [];
@@ -328,13 +335,34 @@ function ScatterPlot({ data, region }) {
             border: '1px solid #ddd',
             fontSize: '13px',
             cursor: 'pointer',
-            backgroundColor: 'white'
+            backgroundColor: 'white',
+            marginRight: '20px'
           }}
         >
           <option value="Toutes">Toutes les cultures</option>
           {cultures.map(culture => (
             <option key={culture} value={culture}>{culture}</option>
           ))}
+        </select>
+
+        <label htmlFor="climate-select" style={{ marginRight: '10px', fontWeight: '500' }}>
+          Variable :
+        </label>
+        <select 
+          id="climate-select"
+          value={climateVariable} 
+          onChange={(e) => setClimateVariable(e.target.value)}
+          style={{
+            padding: '8px 12px',
+            borderRadius: '6px',
+            border: '1px solid #ddd',
+            fontSize: '13px',
+            cursor: 'pointer',
+            backgroundColor: 'white'
+          }}
+        >
+          <option value="temperature">Température</option>
+          <option value="precipitation">Précipitations</option>
         </select>
       </div>
       <svg ref={svgRef}></svg>

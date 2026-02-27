@@ -50,6 +50,7 @@ function RegionDetail({ data, region }) {
     <div className="region-detail">
       
       {/* En-tête avec statistiques clés */}
+      {/*
       <div className="region-header">
         <h2>{region}</h2>
         <div className="stats-grid">
@@ -75,7 +76,7 @@ function RegionDetail({ data, region }) {
           ))}
         </div>
       </div>
-
+        */}
       {/* Graphiques principaux */}
       <div className="charts-container">
         
