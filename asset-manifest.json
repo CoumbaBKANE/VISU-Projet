@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/VISU-Projet/static/css/main.bc2bd64f.css",
-    "main.js": "/VISU-Projet/static/js/main.f9539f3d.js",
+    "main.css": "/VISU-Projet/static/css/main.4dd3ec70.css",
+    "main.js": "/VISU-Projet/static/js/main.b439b38f.js",
     "static/js/453.4aea901c.chunk.js": "/VISU-Projet/static/js/453.4aea901c.chunk.js",
     "index.html": "/VISU-Projet/index.html",
-    "main.bc2bd64f.css.map": "/VISU-Projet/static/css/main.bc2bd64f.css.map",
-    "main.f9539f3d.js.map": "/VISU-Projet/static/js/main.f9539f3d.js.map",
+    "main.4dd3ec70.css.map": "/VISU-Projet/static/css/main.4dd3ec70.css.map",
+    "main.b439b38f.js.map": "/VISU-Projet/static/js/main.b439b38f.js.map",
     "453.4aea901c.chunk.js.map": "/VISU-Projet/static/js/453.4aea901c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc2bd64f.css",
-    "static/js/main.f9539f3d.js"
+    "static/css/main.4dd3ec70.css",
+    "static/js/main.b439b38f.js"
   ]
 }
